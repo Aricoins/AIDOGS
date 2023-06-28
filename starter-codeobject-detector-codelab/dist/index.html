@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Starter Code - Object Detector Codelab</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!-- Copyright 2023 The MediaPipe Authors.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License. -->
+
+<link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+<script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+<body class="text-center p-3 mb-2 bg-primary-subtle text-emphasis-primary">
+  <img class="rounded mx-auto d-block" src="https://storage.cloud.google.com/detecdog/Idog.png" width="25%" />
+  <h1 class="h1 text-bg-dark p-3 sticky-sm-top"> AI Dog Detection </h1>
+  <h2 class="h6 text-bg-primary p-3">using the MediaPipe Object Detector task</h1>
+
+    <h2>Demo: Detecting Doggies</h2>
+    <p><b>Click on an image below</b> to detect my dogs in the image.</p>
+
+    <div class="detectOnClick">
+      <img class=class="rounded float-start" src="https://assets.codepen.io/9177687/tikka.jpeg" width="100%" crossorigin="anonymous" title="Click to get classification!" />
+    </div>
+    <div class="detectOnClick">
+      <img class="rounded float-end" src="https://storage.googleapis.com/tflite-task-tfjs/aci.jpeg" width="100%" crossorigin="anonymous" title="Click to get classification!" />
+    </div>
+
+    <h2 class="badge text-bg-primary">Demo: Dog lookalike contest using webcam continuous detection</h2>
+    <p>Do you have a dog that looks like mine? Place your dog in front of your webcam to get a real-time doggie detection! When ready click "enable webcam" below and accept access to the webcam.</p>
+    <div id="liveView" class="videoView">
+      <button id="webcamButton" class="mdc-button mdc-button--raised">
+        <span class="mdc-button__ripple"></span>
+        <span class="mdc-button__label">ENABLE WEBCAM</span>
+      </button>
+      <video id="webcam" autoplay playsinline></video>
+    </div>
+
+    <footer class="text-center">
+      <p> This demo uses a custom object detection model trained using <a href="https://developers.google.com/mediapipe/solutions/model_maker" target="_blank"> MediaPipe Model Maker</a>.
+        Developed with care by <a href="https://aegres.netlify.app"> AEGR </a></p>
+    </footer>
+</body>
+<!-- partial -->
+  <script type="module" src="./script.js"></script>
+
+</body>
+</html>
